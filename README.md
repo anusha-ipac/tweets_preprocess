@@ -52,7 +52,7 @@ Basic cleaning:
     
     
  Example:   
- Raw Tweet: 'Tweet Preprocessor is #awesome 👍 https://github.com/anusha-ipac/tweets_preprocess' 
+ Raw Tweet: 'Tweet Preprocessor is #awesome 👍 https://github.com/anusha-ipac/tweets_preprocess'   
  Cleaned Tweet: 'Preprocessor is'   
  
  Removed hashtags, emojis, URLs from the raw tweet and returned clean tweet.
