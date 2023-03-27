@@ -31,10 +31,28 @@ Basic cleaning:
 ---------------
 
 .. code:: python
+    >>># Import Preprocess from your library
+    >>>from tweets-preprocess import Preprocess
+    >>>import pandas as pd
+    >>>import numpy as np
 
-    >>> import preprocessor as p
-    >>> p.clean('Preprocessor is #awesome 👍 https://github.com/s/preprocessor')
-    'Preprocessor is'
+    >>># Instantiate a Preprocess object
+    >>>data = pd.read_excel(r"D:\Ipac_new\My_Python_Lib\tweet_preprocess\sample.xlsx")
+    >>>data['pre_text'] = ""
+
+    >>>p = Preprocess(data,'Text')
+    >>>d = p.process()
+
+    >>>data['pre_text'] = pd.Series(d)
+
+    >>>d1 = data.loc[data['pre_text']!='']
+    >>>#save cleaned tweets to csv file
+    d1.to_csv('pre-data.csv')
+    
+    
+ Example:
+ Raw Tweet: 'Preprocessor is #awesome 👍 https://github.com/s/preprocessor')
+ Cleaned Tweet: 'Preprocessor is'
 
 
 Processing files:
