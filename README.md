@@ -31,6 +31,7 @@ Basic cleaning:
 ---------------
 
 .. code:: python
+    
     >>># Import Preprocess from your library
     >>>from tweets-preprocess import Preprocess
     >>>import pandas as pd
@@ -50,9 +51,9 @@ Basic cleaning:
     d1.to_csv('pre-data.csv')
     
     
- Example: \n
- Raw Tweet: 'Preprocessor is #awesome 👍 https://github.com/s/preprocessor') \n
- Cleaned Tweet: 'Preprocessor is'
+ Example:   
+ Raw Tweet: 'Preprocessor is #awesome 👍 https://github.com/s/preprocessor')    
+ Cleaned Tweet: 'Preprocessor is'   
 
 
 Processing files:
