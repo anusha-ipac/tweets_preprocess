@@ -50,8 +50,8 @@ Basic cleaning:
     d1.to_csv('pre-data.csv')
     
     
- Example:
- Raw Tweet: 'Preprocessor is #awesome 👍 https://github.com/s/preprocessor')
+ Example: \n
+ Raw Tweet: 'Preprocessor is #awesome 👍 https://github.com/s/preprocessor') \n
  Cleaned Tweet: 'Preprocessor is'
 
 
