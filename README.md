@@ -52,7 +52,7 @@ Basic cleaning:
     
     
  Example:   
- Raw Tweet: 'Preprocessor is #awesome 👍 https://github.com/s/preprocessor')    
+ Raw Tweet: 'Preprocessor is #awesome 👍 https://github.com/anusha-ipac/tweets_preprocess')    
  Cleaned Tweet: 'Preprocessor is'   
 
 
