@@ -21,7 +21,7 @@ Currently supports cleaning :
 -  Smileys
 -  ``.csv`` and ``.xlsx`` file support
 
-Preprocessor ``v0.1.0`` supports
+Preprocessor ``v0.1.1`` supports
 ``Python 3.9+ on Windows``. 
 
 Usage
