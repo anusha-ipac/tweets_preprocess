@@ -15,9 +15,10 @@ class Preprocess:
     :type csv-file: csv-file
     """
     
-    def __init__(self,data,text_column):
+    def __init__(self,data,text_column,rem_keys):
         self.data = data
         self.text_column = text_column
+        self.rem_keys = rem_keys
     
     def process(self):
         
@@ -33,6 +34,13 @@ class Preprocess:
         texts = [regex.sub(remove_regex, '', text) for text in texts]
         texts = [text.strip() for text in texts]
         texts = [text if len(text)>35 else "" for text in texts]
+        
+        #["happy birthday","birthday","congratulations","rip","thank you","congrats","thanks"]
+        
+        ## remove tweets containing specific keywords
+        # using list comprehension 
+        texts = [ele for ele in texts if all(ch not in ele for ch in self.rem_keys)]
+        
         
         emoj = re.compile("["
         u"\U0001F600-\U0001F64F"  # emoticons
