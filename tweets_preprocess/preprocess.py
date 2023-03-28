@@ -15,11 +15,11 @@ class Preprocess:
     :type csv-file: csv-file
     """
     
-    def __init__(self,data,text_column,rem_keys,length):
+    def __init__(self,data,text_column,rem_keys,tw_len):
         self.data = data
         self.text_column = text_column
         self.rem_keys = rem_keys
-        self.length = length
+        self.tw_len = tw_len
     
     def process(self):
         
@@ -34,7 +34,7 @@ class Preprocess:
         remove_regex = regex.compile(f'({EMAIL_REGEX_STR}|{MENTION_REGEX_STR}|{HASHTAG_REGEX_STR}|{URL_REGEX_STR})')
         texts = [regex.sub(remove_regex, '', text) for text in texts]   
         texts = [text.strip() for text in texts]
-        texts = [text if len(text)>self.length else "" for text in texts]
+        texts = [text if len(text)>self.tw_len else "" for text in texts]
         
         #["happy birthday","birthday","congratulations","rip","thank you","congrats","thanks"]
         
