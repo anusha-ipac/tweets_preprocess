@@ -41,7 +41,7 @@ Basic cleaning:
     >>>data = pd.read_excel(r"D:\Ipac_new\My_Python_Lib\tweet_preprocess\sample.xlsx")
     >>>data['pre_text'] = ""
     
-    >>>rem = ["happy birthday","birthday","congratulations","rip","thank you","congrats","thanks"]
+    >>>rem = ["happy birthday","birthday","congratulations","rip","thank you","congrats","thanks"]  ## sample keywords
     
     >>>p = Preprocess(data,'Text',rem)
     >>>d = p.process()
