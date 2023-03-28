@@ -32,7 +32,7 @@ class Preprocess:
         ### Preprocessing 
         texts = self.data[self.text_column].values.tolist()
         remove_regex = regex.compile(f'({EMAIL_REGEX_STR}|{MENTION_REGEX_STR}|{HASHTAG_REGEX_STR}|{URL_REGEX_STR})')
-        texts = [regex.sub(remove_regex, '', text) for text in texts]  
+        texts = [regex.sub(remove_regex, '', text) for text in texts]   
         texts = [text.strip() for text in texts]
         texts = [text if len(text)>self.length else "" for text in texts]
         
