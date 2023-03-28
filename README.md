@@ -19,6 +19,7 @@ Currently supports cleaning :
 -  Mentions
 -  Emojis
 -  Smileys
+-  Length constraint
 -  remove tweets containing few specific keywords like birthday,congratulations,etc.
 -  ``.csv`` and ``.xlsx`` file support
 
@@ -42,8 +43,8 @@ Basic cleaning:
     >>>data['pre_text'] = ""
     
     >>>rem = ["happy birthday","birthday","congratulations","rip","thank you","congrats","thanks"]  ## sample keywords
-    
-    >>>p = Preprocess(data,'Text',rem)
+    >>>length = 35 
+    >>>p = Preprocess(data,'Text',rem,length)
     >>>d = p.process()
 
     >>>data['pre_text'] = pd.Series(d)
