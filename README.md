@@ -19,9 +19,9 @@ Currently supports cleaning :
 -  Mentions
 -  Emojis
 -  Smileys
+-  remove tweets containing few specific keywords like birthday,congratulations,etc.
 -  ``.csv`` and ``.xlsx`` file support
 
-Preprocessor ``v0.1.3`` supports
 ``Python 3.9+ on Windows``. 
 
 Usage
@@ -33,15 +33,17 @@ Basic cleaning:
 .. code:: python
     
     >>># Import Preprocess from your library
-    >>>from tweets-preprocess import Preprocess
+    >>>from tweets_preprocess import Preprocess
     >>>import pandas as pd
     >>>import numpy as np
 
     >>># Instantiate a Preprocess object
     >>>data = pd.read_excel(r"D:\Ipac_new\My_Python_Lib\tweet_preprocess\sample.xlsx")
     >>>data['pre_text'] = ""
-
-    >>>p = Preprocess(data,'Text')
+    
+    >>>rem = ["happy birthday","birthday","congratulations","rip","thank you","congrats","thanks"]
+    
+    >>>p = Preprocess(data,'Text',rem)
     >>>d = p.process()
 
     >>>data['pre_text'] = pd.Series(d)
@@ -55,7 +57,8 @@ Basic cleaning:
  Raw Tweet: 'Tweet Preprocessor is #awesome 👍 https://github.com/anusha-ipac/tweets_preprocess'   
  Cleaned Tweet: 'Preprocessor is'   
  
- Removed hashtags, emojis, URLs from the raw tweet and returned clean tweet.
+ Removed hashtags, emojis, URLs from the raw tweet and returned clean tweet.   
+ Removes tweets containing specific keywords.
 
 Processing files:
 -----------------
