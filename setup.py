@@ -15,7 +15,7 @@ with open(path.join(HERE, 'README.md'), encoding='utf-8') as f:
 # This call to setup() does all the work
 setup(
     name="tweets_preprocess",
-    version="0.1.1",
+    version="0.1.3",
     description="Library for tweets preprocessing",
     long_description=long_description,
     long_description_content_type="text/markdown",
@@ -32,5 +32,5 @@ setup(
     ],
     packages=["tweets_preprocess"],
     include_package_data=True,
-    install_requires=["numpy","pandas","regex","re"]
+    install_requires=["numpy","pandas","regex"]
 )

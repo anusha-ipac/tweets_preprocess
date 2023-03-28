@@ -59,4 +59,8 @@ class Preprocess:
         texts = [re.sub(emoj, '', i) for i in texts]
         
         return texts
-        
+
+## to upload libraries to pypi library
+##  python setup.py sdist bdist_wheel
+##  twine check dist/*
+##  twine upload dist/*
