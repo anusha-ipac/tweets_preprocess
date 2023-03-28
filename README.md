@@ -70,7 +70,7 @@ Using pip:
 
 .. code:: bash
 
-    $ pip install tweets-preprocess==0.1.3
+    $ pip install tweets-preprocess
 
 
 Using manual installation:
